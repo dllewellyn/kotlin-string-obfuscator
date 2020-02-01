@@ -1,0 +1,19 @@
+name: CI
+
+on: 
+  push:
+    branches:    
+        - master 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+    - run: ./gradlew build
+    - name: Deploy
+      env:
+        BINTRAY_USER = ${{ secrets.BINTRAY_USER }}
+        BINTRAY_KEY = ${{ secrets.BINTRAY_KEY }}
+    - run: ./gradlew bintrayUpload
