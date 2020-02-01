@@ -1,6 +1,7 @@
 # kotlin-string-obfuscator
 Simple kotlin string obfuscator
 
+![CI](https://github.com/dllewellyn/kotlin-string-obfuscator/workflows/CI/badge.svg)
 
 Usage
 
