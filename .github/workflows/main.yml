@@ -13,8 +13,8 @@ jobs:
       - name: Build
         run: ./gradlew build && ./gradlew bintrayUpload 
         env:
-          BINTRAY_USER = ${{ secrets.BINTRAY_USER }}
-          BINTRAY_KEY = ${{ secrets.BINTRAY_KEY }}
+          BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+          BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
 
 
 
