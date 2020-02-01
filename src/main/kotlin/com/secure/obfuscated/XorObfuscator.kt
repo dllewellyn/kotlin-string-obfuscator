@@ -1,5 +1,7 @@
 package com.secure.obfuscated
 
+import kotlin.reflect.full.findAnnotation
+
 fun xorObfuscator(key: String, value: String): String {
     if (key.length != value.length) {
         throw WrongLengthException()
@@ -24,6 +26,10 @@ fun xorDeobfuscator(key: String, value: String): String {
 
     return builder.toString()
 }
+
+fun String.deobfuscate(key : String) = xorDeobfuscator(key, this)
+
+fun String.deobfuscate() = xorDeobfuscator(this::class.findAnnotation<Obfuscated>()!!.key, this)
 
 fun xorDeobfuscator(obfuscated: Any, value: String) =
     xorObfuscator(

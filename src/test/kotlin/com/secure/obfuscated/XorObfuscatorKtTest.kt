@@ -36,4 +36,14 @@ class XorObfuscatorKtTest {
         assertEquals(SampleProperty()
             .obfuscated, "Outp")
     }
+
+    @Test
+    fun `test that we can use the kotlin extension function to decrypt`() {
+        assertEquals(SampleProperty().obfuscatedKotlin, "Outp")
+    }
+
+//    @Test
+//    fun `test that we can use the kotlin extension function and annotation to decrypt`() {
+//        assertEquals(SampleProperty().obfuscatedAnnotation, "Outp")
+//    }
 }
