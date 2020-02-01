@@ -24,7 +24,7 @@ Generating obfuscating strings
 
 Use the tool here:
 
-https://github.com/dllewellyn/kotlin-obufscated-string-generator
+https://github.com/dllewellyn/kotlin-obufscated-string-generator/releases/download/v1.0.0/obufscated-generator-0.1-all.jar
 
 Like so:
 
