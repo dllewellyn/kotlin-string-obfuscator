@@ -11,9 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
+        run: ./gradlew build && ./gradlew bintrayUpload 
         env:
           BINTRAY_USER = ${{ secrets.BINTRAY_USER }}
           BINTRAY_KEY = ${{ secrets.BINTRAY_KEY }}
-      - run: ./gradlew build && ./gradlew bintrayUpload 
+
 
 
