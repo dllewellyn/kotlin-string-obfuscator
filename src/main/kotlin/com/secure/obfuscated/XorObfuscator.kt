@@ -29,7 +29,7 @@ fun xorDeobfuscator(key: String, value: String): String {
 
 fun String.deobfuscate(key : String) = xorDeobfuscator(key, this)
 
-fun String.deobfuscate() = xorDeobfuscator(this::class.findAnnotation<Obfuscated>()!!.key, this)
+fun deobfuscate(obfuscated : Obfuscated, value : String) = xorDeobfuscator(obfuscated.key, value)
 
 fun xorDeobfuscator(obfuscated: Any, value: String) =
     xorObfuscator(

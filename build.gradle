@@ -4,7 +4,7 @@ plugins {
     id 'maven-publish'
 }
 
-def v = '1.0.1'
+def v = '1.0.2'
 def g = 'com.secure.obfuscated'
 group g
 version v
