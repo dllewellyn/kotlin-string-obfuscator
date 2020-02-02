@@ -27,9 +27,11 @@ fun xorDeobfuscator(key: String, value: String): String {
     return builder.toString()
 }
 
-fun String.deobfuscate(key : String) = xorDeobfuscator(key, this)
+fun String.deobfuscate(key: String) = xorDeobfuscator(key, this)
 
-fun deobfuscate(obfuscated : Obfuscated, value : String) = xorDeobfuscator(obfuscated.key, value)
+fun String.deobfuscate(obfuscated: Obfuscated?) = obfuscated?.key?.let {
+    xorDeobfuscator(it, this)
+} ?: throw IllegalArgumentException("Property must have Obfuscated annotation")
 
 fun xorDeobfuscator(obfuscated: Any, value: String) =
     xorObfuscator(

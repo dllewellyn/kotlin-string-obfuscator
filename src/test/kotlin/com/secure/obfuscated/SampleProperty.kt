@@ -12,9 +12,7 @@ class SampleProperty {
     @Obfuscated(key = "Test")
     val obfuscatedAnnotation: String
             by lazy {
-                deobfuscate(
-                    obfuscated = SampleProperty::obfuscatedAnnotation.findAnnotation()!!,
-                    value = "27-16-7-4")
+                "27-16-7-4".deobfuscate(obfuscated = SampleProperty::obfuscatedAnnotation.findAnnotation())
             }
 
 }
