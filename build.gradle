@@ -4,7 +4,7 @@ plugins {
     id 'maven-publish'
 }
 
-def v = '1.0.2'
+def v = '1.0.3'
 def g = 'com.secure.obfuscated'
 group g
 version v
@@ -31,6 +31,8 @@ bintray {
         userOrg = 'dllewellyn'
         licenses = ['Apache-2.0']
         vcsUrl = 'https://github.com/dllewellyn/kotlin-string-obfuscator'
+        publish = true
+        override = true
     }
 }
 
